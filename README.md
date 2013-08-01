@@ -90,7 +90,7 @@ Transfer/sec:    612.74KB
 场景1： 返回10条记录的JSON
 Spring MVC3
 
-    wrk -t8 -c500 -d30 http://192.168.2.101:8080/springmvcbm/index?count=10
+    wrk -t8 -c500 -d30 http://192.168.2.101:8080/springmvcbm/index3?count=10
     
 Results:
 ```
@@ -106,7 +106,7 @@ Transfer/sec:      3.58MB
 
 Struts2
 
-    wrk -t8 c500 -d30 http://192.168.2.101:8080/strutsbm/index.action?count=10
+    wrk -t8 c500 -d30 http://192.168.2.101:8080/strutsbm/index3.action?count=10
 
 Results:
 ```
