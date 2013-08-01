@@ -87,7 +87,7 @@ Requests/sec:    381.29
 Transfer/sec:    612.74KB
 ```
 
-场景1： 返回10条记录的JSON
+场景3： 返回10条记录的JSON
 Spring MVC3
 
     wrk -t8 -c500 -d30 http://192.168.2.101:8080/springmvcbm/index3?count=10
