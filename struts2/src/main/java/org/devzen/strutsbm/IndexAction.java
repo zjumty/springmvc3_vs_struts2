@@ -23,7 +23,7 @@ public class IndexAction extends ActionSupport implements ModelDriven<FooBean> {
             @Result(name = "success", location = "/jsp/index.jsp")
     })
     public String index() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < model.getCount(); i++) {
             fooList.add(new FooBean(10 + i, "name" + i, i % 2 == 0));
         }
         return SUCCESS;
@@ -33,7 +33,7 @@ public class IndexAction extends ActionSupport implements ModelDriven<FooBean> {
             @Result(name = "success", type="freemarker", location = "/jsp/index.ftl")
     })
     public String index2() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < model.getCount(); i++) {
             fooList.add(new FooBean(10 + i, "name" + i, i % 2 == 0));
         }
         return SUCCESS;
@@ -42,7 +42,7 @@ public class IndexAction extends ActionSupport implements ModelDriven<FooBean> {
 
     @Action(value = "index3", results = {@Result(name = "success", type = "json", params = {"root", "fooList"})})
     public String index3() throws Exception {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < model.getCount(); i++) {
             fooList.add(new FooBean(10 + i, "name" + i, i % 2 == 0));
         }
         return SUCCESS;
