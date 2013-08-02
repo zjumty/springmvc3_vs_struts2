@@ -119,3 +119,6 @@ Results:
 Requests/sec:    410.67
 Transfer/sec:    231.00KB
 ```
+
+=====================
+About wrk - Modern HTTP benchmarking tool : https://github.com/wg/wrk
